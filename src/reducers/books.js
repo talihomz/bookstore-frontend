@@ -1,7 +1,6 @@
 import { CREATE_BOOK, REMOVE_BOOK } from "../actions/constants";
 
 const booksReducer = (state = [], action) => {
-    // console.log(action);
     
     switch(action.type) {
         case CREATE_BOOK:

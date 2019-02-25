@@ -8,6 +8,7 @@ import reducers from './reducers/index';
 import { generateId } from './util';
 
 const INITIAL_STORE = {
+    filter: "All",
     books: [
         { id: generateId(), title: "Shaw Shank Redemption", category: "Action" },
         { id: generateId(), title: "Pulp Fiction", category: "Action" },

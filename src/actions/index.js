@@ -1,4 +1,4 @@
-import { CREATE_BOOK, REMOVE_BOOK } from "./constants";
+import { CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER } from "./constants";
 import { generateId } from "../util";
 
 export function createBook (book){
@@ -16,3 +16,9 @@ export function removeBook (book){
     }
 };
 
+export function changeFilter (category) {
+    return {
+        type: CHANGE_FILTER,
+        filter: category
+    }
+};
