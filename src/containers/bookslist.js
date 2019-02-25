@@ -17,9 +17,7 @@ const mapDispatchToProps = (dispatch) => {
 class BooksListComponent extends Component {
 
     render() {
-        const books = this.props.books.map( book => {
-            return <Book book={ book } />
-        });
+        const books = this.props.books;
 
         return <table>
             <thead>
@@ -30,7 +28,7 @@ class BooksListComponent extends Component {
                 </tr>
             </thead>
             <tbody>
-                { books }
+                { books.map( book => <Book book={ book } /> ) }
             </tbody>    
         </table>
     }
