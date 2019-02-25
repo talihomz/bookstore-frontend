@@ -6,6 +6,7 @@ const Book = (props) => {
         <td>{ book.id }</td>
         <td>{ book.title }</td>
         <td>{ book.category }</td>
+        <td><button onClick={ props.onRemove }>X</button></td>
     </tr>;
 }
 

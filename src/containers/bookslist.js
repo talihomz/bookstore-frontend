@@ -19,6 +19,12 @@ const mapDispatchToProps = (dispatch) => {
 
 class BooksListComponent extends Component {
 
+    handleRemoveBook(book) {
+        
+        // console.log(book);
+        this.props.removeBook(book);   
+    }
+
     render() {
         const books = this.props.books;
 
@@ -31,7 +37,7 @@ class BooksListComponent extends Component {
                 </tr>
             </thead>
             <tbody>
-                { books.map( book => <Book key={ book.id } book={ book } /> ) }
+                { books.map( book => <Book key={ book.id } book={ book } onRemove={ () => this.handleRemoveBook(book) } /> ) }
             </tbody>    
         </table>
     }
