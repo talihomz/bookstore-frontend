@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import BOOK_CATEGORIES from './categories';
 import { createBook } from '../actions';
 import { connect } from 'react-redux';
+import CategoryList from '../components/category-list';
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -49,18 +49,13 @@ class BooksFormComponent extends Component {
     
     render(){
 
-        const { title, category } = this.state;
-        const categoryOptions = BOOK_CATEGORIES.map( category => {
-            return <option key={ Math.random() } value={ category }>{ category }</option>;
-        });
+        const { title, category } = this.state;        
 
         return <form onSubmit={ this.handleSubmit }>
             <label>Title</label>
             <input type="text" placeholder="Title" name="title" onChange={ this.handleChange } value={ title } /> <br />
             <label>Category</label>
-            <select name="category" onChange={ this.handleChange } value={ category }>
-                {categoryOptions}
-            </select>
+            <CategoryList onChange={ this.handleChange } category={ category } />
             <br />
             <button type="submit">Save</button>
         </form>
