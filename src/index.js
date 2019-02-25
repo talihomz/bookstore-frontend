@@ -5,10 +5,7 @@ import { Provider } from 'react-redux';
 
 import App from './components/app';
 import reducers from './reducers/index';
-
-const generateId = _ => {
-    return parseInt(Math.random() * 10000);
-}
+import { generateId } from './util';
 
 const INITIAL_STORE = {
     books: [

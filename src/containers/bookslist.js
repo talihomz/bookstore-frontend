@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Book from '../components/book';
+import { removeBook } from '../actions';
 
 const mapStateToProps = (state) => {
     return {
@@ -10,7 +11,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
+        removeBook: (book) => {
+            dispatch(removeBook(book))
+        }
     }
 }; 
 
@@ -28,7 +31,7 @@ class BooksListComponent extends Component {
                 </tr>
             </thead>
             <tbody>
-                { books.map( book => <Book book={ book } /> ) }
+                { books.map( book => <Book key={ book.id } book={ book } /> ) }
             </tbody>    
         </table>
     }
