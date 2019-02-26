@@ -15,7 +15,7 @@ const mapDispatchToProps = (dispatch) => {
 const resetComponentState = _ => {
     return {
         title: "",
-        category: "Action"
+        category: ""
     }
 }
 
@@ -28,6 +28,7 @@ class BooksFormComponent extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleCategoryChange = this.handleCategoryChange.bind(this);
     }
 
     handleChange(e) {
@@ -46,19 +47,37 @@ class BooksFormComponent extends Component {
         this.props.createBook( { title, category } );
         this.setState(resetComponentState());
     }
+
+    handleCategoryChange(value) {
+        this.setState({ category: value })
+    } 
     
     render(){
 
-        const { title, category } = this.state;        
+        const { title, category } = this.state; 
+        
+        return <div className="row">
+            <div className="col-12">
+                <h3>Add new book</h3>
+            </div>
+            <div className="col-12">
+                <form onSubmit={ this.handleSubmit } className="d-flex">
+                    <input className="form-control mr-2" type="text" placeholder="Title" name="title" onChange={ this.handleChange } value={ title } />
+                    <CategoryList valueChanged={ this.handleCategoryChange } category={ category } placeholder="Category" />
+                    <button type="submit" className="btn btn-primary mr-2 ml-2 pl-2 pr-2">Add Book</button>
+                </form>
+            </div>
+            
+        </div>
 
-        return <form onSubmit={ this.handleSubmit }>
-            <label>Title</label>
-            <input type="text" placeholder="Title" name="title" onChange={ this.handleChange } value={ title } /> <br />
-            <label>Category</label>
-            <CategoryList onChange={ this.handleChange } category={ category } />
-            <br />
-            <button type="submit">Save</button>
-        </form>
+        // return 
+        //     <label>Title</label>
+        //     
+        //     <label>Category</label>
+        //     
+        //     <br />
+        //     
+        // </form>
     }
     
 };
