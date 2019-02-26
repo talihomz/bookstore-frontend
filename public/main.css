@@ -1,0 +1,16 @@
+nav {
+    background: white;
+    border-bottom: solid 2px whitesmoke;
+}
+body {
+    background: #fafafa;
+    padding-bottom: 32px;
+}
+
+ul {
+    list-style: none;
+}
+
+.book-action {
+    margin-right: 16px;
+}

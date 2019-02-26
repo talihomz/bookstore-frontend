@@ -26,7 +26,7 @@ class BooksListComponent extends Component {
     handleRemoveBook(book) {
         
         // console.log(book);
-        this.props.removeBook(book);   
+        this.props.removeBook(book); 
     }
 
     render() {
@@ -37,20 +37,7 @@ class BooksListComponent extends Component {
             <br />
             <CategoryFilter />
             <br />
-            <table>
-                <thead>
-                    <tr>
-                        <th>Book ID</th>
-                        <th>Title</th>
-                        <th>Category</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        booksToDisplay.map( book => <Book key={ book.id } book={ book } onRemove={ () => this.handleRemoveBook(book) } /> ) 
-                    }
-                </tbody>
-            </table>
+            { booksToDisplay.map( book => <Book key={ book.id } book={ book } onRemove={ () => this.handleRemoveBook(book) } /> ) }
         </div>
     }
 }

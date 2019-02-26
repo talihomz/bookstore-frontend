@@ -23,6 +23,7 @@ class CategoryFilterComponent extends Component {
         super(props);
 
         this.handleChange = this.handleChange.bind(this);
+        this.handleCategoryChange = this.handleCategoryChange.bind(this);  
     }
 
     handleChange(e) {
@@ -31,12 +32,15 @@ class CategoryFilterComponent extends Component {
         this.props.changeFilter(value);
     }
 
+    handleCategoryChange(value) {
+        this.props.changeFilter(value);
+    } 
+
     render() {
         const { filter } = this.props;
 
         return <div>
-            <label>Filter: </label>
-            <CategoryList onChange={ this.handleChange } category={ filter } hasAll/>
+            <CategoryList valueChanged={ this.handleCategoryChange } category={ filter } hasAll/>
         </div>
     }
 }
