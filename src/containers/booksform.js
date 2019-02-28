@@ -56,7 +56,7 @@ class BooksFormComponent extends Component {
 
         const { title, category } = this.state; 
         
-        return <div className="row">
+        return <div className="row book-form">
             <div className="col-12">
                 <h3>Add new book</h3>
             </div>
@@ -64,10 +64,11 @@ class BooksFormComponent extends Component {
                 <form onSubmit={ this.handleSubmit } className="d-flex">
                     <input className="form-control mr-2" type="text" placeholder="Title" name="title" onChange={ this.handleChange } value={ title } />
                     <CategoryList valueChanged={ this.handleCategoryChange } category={ category } placeholder="Category" />
-                    <button type="submit" className="btn btn-primary mr-2 ml-2 pl-2 pr-2">Add Book</button>
+                    <button type="submit" className="btn btn-custom mr-2 ml-2 pl-2 pr-2">Add Book</button>
                 </form>
+
+                <br />
             </div>
-            
         </div>
 
         // return 

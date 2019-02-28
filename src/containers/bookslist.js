@@ -36,7 +36,6 @@ class BooksListComponent extends Component {
         return <div>
             <br />
             <CategoryFilter />
-            <br />
             { booksToDisplay.map( book => <Book key={ book.id } book={ book } onRemove={ () => this.handleRemoveBook(book) } /> ) }
         </div>
     }
