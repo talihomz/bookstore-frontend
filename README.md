@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Bookstore CMS Frontend
+
+Frontend implementation of a bookstore CMS. See live demo [here](https://bookstore-final.herokuapp.com/#)
+
 
 ## Available Scripts
 
