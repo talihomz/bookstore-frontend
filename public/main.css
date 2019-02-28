@@ -17,7 +17,6 @@ ul {
     margin-right: 16px;
 }
 
-/* Typography */
 .navbar-brand {
     font-family: Montserrat;
     font-size: 30px;
@@ -55,12 +54,132 @@ ul {
     color: #0290ff !important;
 }
 
+.category {
+    opacity: 0.5;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #121212 !important;
+}
+
+.title {
+    font-family: 'Roboto Slab';
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    color: #121212;
+}
+
+.author {
+    font-family: 'Roboto Slab';
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4386bf;
+}
+
+.book-action a {
+    font-family: 'Roboto Slab';
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4386bf;
+    margin-right: 8px;
+    padding-right: 16px;
+    border-right: solid lightgrey 1px;
+}
+
+.book-action.last a {
+    border-right: none;
+}
+
+.percentage {
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #121212;
+}
+
+.completed {
+    opacity: 0.5;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #121212;
+}
+
+.current-chapter {
+    border-left: solid 1px lightgrey;
+    padding-left: 64px;
+    padding-top: 16px;
+}
+
+.current-chapter h6 {
+    opacity: 0.5;
+    font-family: 'Roboto Slab';
+    font-size: 13px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #121212;
+    text-transform: uppercase;
+}
+
+.current-chapter span {
+    font-family: 'Roboto Slab';
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.4px;
+    color: #121212;
+}
+
+.current-chapter button {
+    font-family: 'Roboto Slab';
+    font-size: 13px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
 /* Components */
 
 /* Progressbar */
 /* Ref: https://www.cssscript.com/circular-progress-bar-plain-html-css/ */
 .progress-circle {
-    font-size: 20px;
+    font-size: 16px;
     margin: 20px;
     position: relative; /* so that children can be absolutely positioned */
     padding: 0;

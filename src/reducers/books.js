@@ -4,7 +4,7 @@ const booksReducer = (state = [], action) => {
     
     switch(action.type) {
         case CREATE_BOOK:
-        return [ ...state, action.book ];
+        return [ action.book, ...state ];
         case REMOVE_BOOK:
         const bookIndex = state.findIndex( book => book.id === action.bookId );
         return [ 
