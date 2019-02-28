@@ -2,23 +2,28 @@ import React from 'react';
 
 const Book = (props) => {
     const book = props.book;
-    
+
     return <div className="card p-4 mt-3">
         <div className="row">
             <div className="col-6">
-                <span className="category">{ book.category }</span>
-                <h4 className="title">{ book.title }</h4>
+                <span className="category">{book.category}</span>
+                <h4 className="title">{book.title}</h4>
                 <p className="author">Suzanne Collins</p>
                 <br />
                 <ul className="d-flex ml-0 pl-0">
                     <li className="book-action"><a href="#">Comments</a></li>
-                    <li className="book-action"><a href="#" onClick={ props.onRemove }>Remove</a></li>
+                    <li className="book-action"><a href="#" onClick={props.onRemove}>Remove</a></li>
                     <li className="book-action"><a href="#">Edit</a></li>
-                </ul>               
+                </ul>
             </div>
             <div className="col-3">
-                <p className="progress">64%</p>
-                <span className="progress-footer">Complete</span>
+                <div class="progress-circle p10">
+                    <span>10%</span>
+                    <div class="left-half-clipper">
+                        <div class="first50-bar"></div>
+                        <div class="value-bar"></div>
+                    </div>
+                </div>
             </div>
             <div className="col-3">
                 <h6>Current Chapter</h6>
