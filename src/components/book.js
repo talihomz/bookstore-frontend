@@ -1,4 +1,5 @@
 import React from 'react';
+import CircularProgressBar from './circular-progressbar';
 
 const Book = (props) => {
     const book = props.book;
@@ -16,13 +17,11 @@ const Book = (props) => {
                     <li className="book-action"><a href="#">Edit</a></li>
                 </ul>
             </div>
-            <div className="col-3">
-                <div class="progress-circle p10">
-                    <span>10%</span>
-                    <div class="left-half-clipper">
-                        <div class="first50-bar"></div>
-                        <div class="value-bar"></div>
-                    </div>
+            <div className="col-3 d-flex align-items-center">
+                <CircularProgressBar value="60" />
+                <div>
+                    <span className="percentage d-block">60%</span>
+                    <span className="completed d-block">Completed</span>
                 </div>
             </div>
             <div className="col-3">
