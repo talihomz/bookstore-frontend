@@ -27,7 +27,7 @@ const Book = (props) => {
             <div className="current-chapter">
                 <h6>Current Chapter</h6>
                 <span className="d-block">Chapter 7</span>
-                <button className="btn btn-primary mt-4">Update Progress</button>
+                <button className="btn btn-custom mt-4">Update Progress</button>
             </div>
         </div>
     </div>

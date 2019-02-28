@@ -28,7 +28,7 @@ class CategoryList extends Component {
         const { value } = this.state;
         const listLabel = value === undefined || value === "" ? placeholder : value;
 
-        return <div className="dropdown show mr-2 ml-2 pl-2 pr-2">
+        return <div className="dropdown show mr-2 ml-2">
             <button id="dropdownMenuLink" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 { listLabel }
             </button>

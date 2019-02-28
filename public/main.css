@@ -159,7 +159,7 @@ ul {
     color: #121212;
 }
 
-.current-chapter button {
+.btn-custom {
     font-family: 'Roboto Slab';
     font-size: 13px;
     font-weight: 300;
@@ -172,6 +172,62 @@ ul {
     text-transform: uppercase;
     padding-left: 32px;
     padding-right: 32px;
+    background: #0290ff;
+}
+
+.book-form {
+    margin-top: 32px;
+}
+
+.book-form h3 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    color: #888888;
+    text-transform: uppercase;
+}
+
+.book-form .form-control {
+    border-radius: 4px;
+    border: solid 1px #e8e8e8;
+    background-color: #ffffff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.1px;
+    color: #c4c4c4;
+}
+
+.dropdown {
+    border-radius: 4px;
+    border: solid 1px #e8e8e8;
+    background-color: #ffffff;
+    width: 287px;
+}
+
+.dropdown .btn {
+    width: 287px;
+    background: none !important;
+    border: none;
+    color: #c4c4c4 !important;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.1px;
+}
+
+.dropdown .dropdown-menu {
+    width: 287px;
 }
 
 /* Components */
