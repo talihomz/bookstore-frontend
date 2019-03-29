@@ -26,12 +26,6 @@ class CategoryFilterComponent extends Component {
         this.handleCategoryChange = this.handleCategoryChange.bind(this);  
     }
 
-    handleChange(e) {
-        const { value } = e.target;
-        
-        this.props.changeFilter(value);
-    }
-
     handleCategoryChange(value) {
         this.props.changeFilter(value);
     } 

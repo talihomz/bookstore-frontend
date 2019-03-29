@@ -70,15 +70,6 @@ class BooksFormComponent extends Component {
                 <br />
             </div>
         </div>
-
-        // return 
-        //     <label>Title</label>
-        //     
-        //     <label>Category</label>
-        //     
-        //     <br />
-        //     
-        // </form>
     }
     
 };
