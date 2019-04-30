@@ -5,8 +5,6 @@ import { removeBook } from '../actions';
 import CategoryFilter from '../components/category-filter';
 
 const mapStateToProps = (state) => {
-    // console.log(state);
-    
     return {
         books: state.books,
         filter: state.filter
@@ -25,7 +23,6 @@ class BooksListComponent extends Component {
 
     handleRemoveBook(book) {
         
-        // console.log(book);
         this.props.removeBook(book); 
     }
 
